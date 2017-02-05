@@ -83,7 +83,7 @@ module.exports = (() => {
                 minChunks: 2,
             }),
             new ExtractTextPlugin('[name].css'),
-            new webpack.ProvidePlugin({'_': "underscore",'PubSub': "pubsub-js"}),
+            new webpack.ProvidePlugin({'_': "underscore"}),
             new OpenBrowserPlugin({url:'http://localhost:3000/main.html',browser:'chrome'})
         ].concat(htmlPlugins()),
 
