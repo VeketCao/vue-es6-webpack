@@ -83,8 +83,8 @@ module.exports = (() => {
                 minChunks: 2,
             }),
             new ExtractTextPlugin('[name].css'),
-            new webpack.ProvidePlugin({'_': "underscore"}),
-            new OpenBrowserPlugin({url:'http://localhost:3000/main.html',browser:'chrome'})
+            new webpack.ProvidePlugin({'_': "underscore",'Vue':'vue'}),
+            new OpenBrowserPlugin({url:'http://localhost:3000/main.html'})
         ].concat(htmlPlugins()),
 
         module:{

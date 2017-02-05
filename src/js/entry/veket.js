@@ -1,15 +1,11 @@
 /**
  * Created by Veket on 2017/2/4.
  */
-import Vue from 'vue';
 import App from '../veket/App/main.vue';
 import router from '../veket/Routes/main';
-import VueResource from 'vue-resource';
 
 import '../../css/base.css';
 
-/**初始配置**/
-Vue.use(VueResource);//http请求
 
 new Vue({
     router:router,

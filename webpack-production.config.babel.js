@@ -75,7 +75,7 @@ module.exports = (() => {
                 mangle: { except: ['$super', '$', 'exports', 'require']}
             }),
             new ExtractTextPlugin('css/[contenthash:8].[name].min.css'),
-            new webpack.ProvidePlugin({'_': "underscore"})
+            new webpack.ProvidePlugin({'_': "underscore",'Vue':'vue'})
         ].concat(htmlPlugins()),
 
         module:{

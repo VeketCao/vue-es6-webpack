@@ -48,3 +48,14 @@
 
 #webstorm webpack经常不能自动热更新问题
 webstrom settings的system settings默认勾选‘safewrite’,勾选去掉就可以了
+
+
+#项目应用说明
+1.全局变量 Vue,_ 直接使用；
+
+2.ajax请求使用fetch
+fetch('http://localhost:5000/v1/test',{method:'GET'}).then(function (rtn) {
+    rtn.json().then(function (obj) {
+        console.log(obj);
+    });
+});
