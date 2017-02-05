@@ -3,7 +3,7 @@
  */
 import '../../css/base.css';
 
-var mainVue = new Vue({
+new Vue({
     el:'#app',
     template:'<div>hello main ! <a href="./veket.html" target="_blank">test</a></div>'
 });
