@@ -30,10 +30,12 @@
   └──img                            # 图片
   └──js                             # 显目JS文件，这里包括了组件，js入口文件
     └──components                   # 公共基础组件
+    └──directives                   # 指令
     └──entry                        # JS入口文件，文件名对应../html目录下的html文件的文件名 
     └──lib                          # 第三方库文件
-    └──module                       # 业务模块，页面模块
-    └──test                        # 测试
+    └──modules                      # 业务模块，页面模块
+    └──services                     # 基础服务层
+    └──veket                        # 测试
 ├── .babelrc                        # babel编译规则
 └── .gitignore                      # GIT忽略的目录或文件
 ├── package.json                    # NPM包管理配置文件，描述了一个NPM包的所有相关信息，包括作者、简介、包依赖、构建等信息。
