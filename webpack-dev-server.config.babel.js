@@ -73,6 +73,11 @@ module.exports = (() => {
             new webpack.HotModuleReplacementPlugin(),
             new webpack.optimize.OccurenceOrderPlugin(),
             new webpack.NoErrorsPlugin(),
+            new webpack.DefinePlugin({
+                'process.env.NODE_ENV': '"development"',
+                __DEV__:true,
+                __PROD__:false
+            }),
             new CommonsChunkPlugin({
                 names: ['common', 'vendor'],
                 minChunks: 2,
@@ -115,7 +120,13 @@ module.exports = (() => {
 
             ]
         },
-
+        vue:{
+            loaders: {
+                js: 'babel',
+                css: ExtractTextPlugin.extract('vue-style', 'css'),
+                sass: ExtractTextPlugin.extract('vue-style', 'css!sass')
+            }
+        },
         // postcss 插件
         postcss: () => [
             require('precss'),

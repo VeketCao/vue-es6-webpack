@@ -9,6 +9,11 @@ html,body{ width:100%; height:100%;}
 ********************************/
 .g-wrap{width:1190px;margin:0 auto;overflow: hidden;}/*宽1000居中*/
 .clear-fix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-
+.g-header{
+    width:100%;
+    height:50px;
+    background:bisque;
+    min-width:1190px;
+}
 
 

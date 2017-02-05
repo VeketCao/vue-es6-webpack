@@ -61,6 +61,11 @@ module.exports = (() => {
             filename:'js/[hash:8].[name].min.js',
         },
         plugins:[
+            new webpack.DefinePlugin({
+                'process.env.NODE_ENV': '"production"',
+                __DEV__:false,
+                __PROD__:true
+            }),
             new CommonsChunkPlugin({
                 names: ['common', 'vendor'],
                 minChunks: 2,
@@ -106,7 +111,13 @@ module.exports = (() => {
 
             ]
         },
-
+        vue:{
+            loaders: {
+                js: 'babel',
+                css: ExtractTextPlugin.extract('vue-style', 'css'),
+                sass: ExtractTextPlugin.extract('vue-style', 'css!sass')
+            }
+        },
         // postcss 插件
         postcss: () => [
             require('precss'),
