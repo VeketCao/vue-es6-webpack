@@ -95,7 +95,7 @@ module.exports = (() => {
                 },
                 {
                     test: /\.scss$/,
-                    loader: ExtractTextPlugin.extract('vue-style', '!css!sass!postcss?parser=postcss-scss'),
+                    loader: ExtractTextPlugin.extract('vue-style', 'css!sass!postcss?parser=postcss-scss'),
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -114,8 +114,8 @@ module.exports = (() => {
         vue:{
             loaders: {
                 js: 'babel',
-                css: ExtractTextPlugin.extract('vue-style', 'css'),
-                sass: ExtractTextPlugin.extract('vue-style', 'css!sass')
+                css: ExtractTextPlugin.extract('vue-style', 'css!postcss?parser=postcss-scss'),
+                sass: ExtractTextPlugin.extract('vue-style', 'css!sass!postcss?parser=postcss-scss')
             }
         },
         // postcss 插件
