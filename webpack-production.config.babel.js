@@ -91,24 +91,24 @@ module.exports = (() => {
                 },
                 {
                     test: /\.css$/,
-                    exclude: [nodeModulesPath],
-                    loader: ExtractTextPlugin.extract('style', 'css!postcss?parser=postcss-scss'),
+                    loader: ExtractTextPlugin.extract('vue-style', 'css!postcss?parser=postcss-scss'),
                 },
                 {
                     test: /\.scss$/,
-                    exclude: [nodeModulesPath],
-                    loader: ExtractTextPlugin.extract('style', '!css!sass!postcss?parser=postcss-scss'),
+                    loader: ExtractTextPlugin.extract('vue-style', '!css!sass!postcss?parser=postcss-scss'),
                 },
-                // loader png or jpg or git and svg files 然后压缩之，并把小于10kb的图片base64格式内联到css文件中。
                 {
-                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                     loaders: [
                         'image-webpack?{progressive:true, optimizationLevel: 4, ' +
                         'interlaced: false, pngquant:{quality: "65-90", speed: 4}}', // 压缩图片
                         'url?limit=10000&name=img/[hash:8].[name].[ext]', // 小于10kb的图片base64格式内联到css文件中。
                     ],
                 },
-
+                {
+                    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                    loader: 'url?limit=10000&name=fonts/[hash:8].[name].[ext]'
+                },
             ]
         },
         vue:{
