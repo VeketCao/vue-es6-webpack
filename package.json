@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/VeketCao/vue-es6-webpack.git"
   },
-  "keywords": [],
+  "keywords": ["vue2.0","element","webpack","es6"],
   "author": "veket",
   "license": "ISC",
   "bugs": {
