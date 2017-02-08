@@ -49,7 +49,7 @@ module.exports = (() => {
     const config = {
         resolve:{
             alias:{
-                vue$:`${nodeModulesPath}/vue/dist/vue.js`,
+                vue:`${nodeModulesPath}/vue/dist/vue.js`,
                 img:`${srcDir}/img`,
                 fonts:`${srcDir}/fonts`
             },

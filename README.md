@@ -12,7 +12,7 @@
 
 #构建项目
 
-下载依赖包 npm install 
+下载依赖包 npm install (或者用cnpm install)
 启动开发环境 npm start
 编译项目，生产部署文件 npm run build
 

@@ -9,15 +9,20 @@ import Home from '../Home/main.vue';
 
 Vue.use(VueRouter);
 
+/**路由表**/
+const routesMap = [
+    { path: '/', redirect: '/home' },
+    {path:'/home',name:'home',component:Home},
+    {path:'/m1',name:'m1',component:M1},
+    {path:'/m2',name:'m2',component:M2}
+];
+
+
+/**路由配置**/
 const router = new VueRouter({
     mode:'hash',
     base:__dirname,
-    routes:[
-        { path: '/', redirect: '/home' },
-        {path:'/home',name:'home',component:Home},
-        {path:'/m1',name:'m1',component:M1},
-        {path:'/m2',name:'m2',component:M2}
-    ]
+    routes:routesMap
 });
 
 export default router;
