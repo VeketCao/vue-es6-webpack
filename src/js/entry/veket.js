@@ -1,10 +1,10 @@
 /**
  * Created by Veket on 2017/2/4.
  */
-import App from '../veket/App/main.vue';
+import App from '../veket/App/main';
 import router from '../veket/Routes/main';
 
-import '../../css/base.css';
+import '../../css/base';
 
 
 new Vue({

@@ -21,8 +21,8 @@
 }
 </style>
 <script>
-    import HeaderComponent from '../Header/main.vue'
-    import FooterComponent from '../Footer/main.vue'
+    import HeaderComponent from '../Header/main'
+    import FooterComponent from '../Footer/main'
     export default{
         data(){
             return{

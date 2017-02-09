@@ -1,7 +1,7 @@
 /**
  * Created by Veket on 2016/11/9.
  */
-import '../../css/base.css';
+import '../../css/base';
 
 new Vue({
     el:'#app',
