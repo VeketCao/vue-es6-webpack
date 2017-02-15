@@ -7,7 +7,7 @@
         <footer-component/>
     </div>
 </template>
-<style>
+<style scoped>
 .app-container{
    margin: 0 auto;
    background: #fff;

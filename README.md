@@ -44,8 +44,6 @@
 ├── webpack-production.config.babel.js    # 生产构建配置文件
 ```
 
-
-
 #webstorm webpack经常不能自动热更新问题
 webstrom settings的system settings默认勾选‘safewrite’,勾选去掉就可以了
 

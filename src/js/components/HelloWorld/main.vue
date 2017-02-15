@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>hello world!</div>
+        <div>{{msg}}</div>
     </div>
 </template>
 <style>
@@ -9,7 +9,7 @@
     export default{
         data(){
             return{
-                msg:'hello vue'
+                msg:'hello world!!!'
             }
         }
     }

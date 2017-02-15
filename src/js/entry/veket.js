@@ -6,7 +6,6 @@ import router from '../veket/Routes/main';
 
 import '../../css/base';
 
-
 new Vue({
     router:router,
     render: h => h(App)
@@ -22,9 +21,3 @@ if (__PROD__) {
     Vue.config.devtools = false;
 }
 
-
-/*
- Vue.http.get('http://localhost:5000/v1/test').then(function (res) {
- console.log(res);
- });
- */
